@@ -8,6 +8,7 @@
 
 #include "Controller.hpp"
 
+
 using namespace std;
 
 void Controller :: start()
@@ -23,6 +24,14 @@ void Controller :: start()
     {
         cout << "Index is " << index << "\t";
     }
+    
+    vector<CrimeData> myData FileController :: readCrimeDataToVector("/Users/sbra4670/Documents/SwiftProjects/DataStructures/Controller/Controller.cpp/Users/sbra4670/Downloads/crime.csv");
+    
+    for (int index = 234; index < 400; index += 30)
+    {
+        cout << index << " is " << myData[index] << endl;
+    }
+    
     codeTimer.stopTimer();
     codeTimer.displayInformation();
 }
