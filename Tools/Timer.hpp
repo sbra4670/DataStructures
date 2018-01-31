@@ -6,9 +6,22 @@
 //  Copyright © 2018 Bravo, Sebastian. All rights reserved.
 //
 
-#ifndef Timer_hpp
 #define Timer_hpp
 
-#include <stdio.h>
+#include <time.h>
+#include <iostream>
+#include <assert.h>
 
-#endif /* Timer_hpp */
+class Timer
+{
+private:
+    clock_t executionTime;
+    
+public:
+    Timer();
+    void startTimer();
+    void stopTimer();
+    void resetTimer();
+    void displayInformation();
+    long getTimeinMicroseconds();
+};

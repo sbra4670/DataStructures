@@ -6,4 +6,11 @@
 //  Copyright © 2018 Bravo, Sebastian. All rights reserved.
 //
 
-#include <stdio.h>
+#include "Controller.hpp"
+
+int main()
+{
+    Controller app;
+    app.start();
+    return 0;
+}

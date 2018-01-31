@@ -6,9 +6,16 @@
 //  Copyright © 2018 Bravo, Sebastian. All rights reserved.
 //
 
-#ifndef Controller_hpp
+
 #define Controller_hpp
 
-#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include "Timer.hpp"
 
-#endif /* Controller_hpp */
+class Controller
+{
+public:
+    void start();
+};
+
