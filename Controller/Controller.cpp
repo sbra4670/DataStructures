@@ -25,7 +25,7 @@ void Controller :: start()
     {
         Timer searchTimer;
         searchTimer.startTimer()
-        vector<CrimeData> myData = FileController :: readCrimeDataToVector("/Users/sbra4670/Documents/SwiftProjects/DataStructures/Controller/Controller.cpp/Users/sbra4670/Downloads/crime.csv");
+        vector<CrimeData> myData = FileController :: readCrimeDataToVector("/Users/sbra4670/Downloads/crime.csv");
         
         int minIndex = 0;
         int maxIndex = 0;
