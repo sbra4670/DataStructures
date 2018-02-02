@@ -7,31 +7,44 @@
 //
 
 #include "Controller.hpp"
+#include "/Users/sbra4670/Downloads/crime.csv"
 
 
 using namespace std;
 
 void Controller :: start()
 {
-    Timer codeTimer;
-    codeTimer.startTimer();
-    cout << "Look code on the screen!" << endl;
-    codeTimer.stopTimer();
-    codeTimer.displayInformation();
-    codeTimer.resetTimer();
-    codeTimer.startTimer();
-    for (int index = 0; index < 50000; index++)
-    {
-        cout << "Index is " << index << "\t";
-    }
-    
-    vector<CrimeData> myData FileController :: readCrimeDataToVector("/Users/sbra4670/Documents/SwiftProjects/DataStructures/Controller/Controller.cpp/Users/sbra4670/Downloads/crime.csv");
+    findMaxAndMin();
     
     for (int index = 234; index < 400; index += 30)
     {
-        cout << index << " is " << myData[index] << endl;
+        std :: cout << index << " is " << myData[index] << endl;
     }
     
-    codeTimer.stopTimer();
-    codeTimer.displayInformation();
+    void Controller :: findMaxAndMin()
+    {
+        Timer searchTimer;
+        searchTimer.startTimer()
+        vector<CrimeData> myData = FileController :: readCrimeDataToVector("/Users/sbra4670/Documents/SwiftProjects/DataStructures/Controller/Controller.cpp/Users/sbra4670/Downloads/crime.csv");
+        
+        int minIndex = 0;
+        int maxIndex = 0;
+        
+        for (int index = 1; index < myData.size(); index ++)
+        {
+            if(myData [minIndex] > myData [index])
+            {
+                minIndex = index;
+            }
+            
+            if (myData [maxIndex] < myData [index])
+            {
+                maxIndex = index;
+            }
+        }
+        searchTimer.stopTimer();
+        cout << "The smallest rime stat is at " << minIndex << " and it is: " << myData[minIndex] << endl;
+        cout << "The largest Crime stat is at " << maxIndex << " and it is: " << myData[maxIndex] << endl
+        searchTimer.displayInfromation();
+    }
 }

@@ -75,8 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				76EA934620224403004A46A2 /* DataStructures */,
-				76EA93542022449A004A46A2 /* Controller */,
 				769B6AAD20225ACC002CAE37 /* Data */,
+				76EA93542022449A004A46A2 /* Controller */,
 				76EA93532022448E004A46A2 /* Diagrams */,
 				76EA934520224403004A46A2 /* Products */,
 			);

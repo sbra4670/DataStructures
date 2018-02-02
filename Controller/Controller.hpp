@@ -6,7 +6,7 @@
 //  Copyright © 2018 Bravo, Sebastian. All rights reserved.
 //
 
-
+#ifndef Controller_hpp
 #define Controller_hpp
 
 #include <iostream>
@@ -18,4 +18,6 @@ class Controller
 public:
     void start();
 };
+
+#endif /* Controller_hpp */
 
