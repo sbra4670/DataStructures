@@ -91,4 +91,22 @@ Type Graph<Type> :: operator[](<#int vertex#>) const
 }
 
 
+template <class Type>
+void Graph<Type> :: addVertex(const Type &value)
+{
+    assert(vertex < vertexCount);
+    return graphData[vertex];
+    vertexCount++;
+    
+    for(int otherVertexNumber = 0; otherVertexNumber < vertexCount; otherVertexNumber++)
+    {
+        adjacencyMatrix[otherVertexNumber][newVertexNumber] = false;
+        adjacencyMatrix[otherVertexNumber][otherVertexNumber] = false;
+    }
+    
+    graphData[newVertexNumber] = value;
+}
+
+
+
 #endif /* Graph_hpp */
