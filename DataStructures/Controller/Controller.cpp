@@ -14,6 +14,7 @@ using namespace std;
 
 void Controller :: start()
 {
+    
     findMaxAndMin();
     
     for (int index = 234; index < 400; index += 30)
@@ -43,7 +44,7 @@ void Controller :: start()
             }
         }
         searchTimer.stopTimer();
-        cout << "The smallest rime stat is at " << minIndex << " and it is: " << myData[minIndex] << endl;
+        cout << "The smallest crime stat is at " << minIndex << " and it is: " << myData[minIndex] << endl;
         cout << "The largest Crime stat is at " << maxIndex << " and it is: " << myData[maxIndex] << endl
         searchTimer.displayInfromation();
     }
